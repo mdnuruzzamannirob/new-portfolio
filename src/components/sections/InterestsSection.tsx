@@ -14,7 +14,7 @@ const InterestsSection = () => {
     <section className="bg-card-bg border border-card-border rounded-2xl overflow-hidden">
       <SectionTitle>Interests</SectionTitle>
 
-      <div className="px-5 sm:px-6 py-4 space-y-3">
+      <div className="px-5 sm:px-6 py-5 space-y-4">
         {interests.map((interest, i) => {
           const pct = levelToPercent[interest.level] ?? 50;
           return (

@@ -6,10 +6,10 @@ const SkillsSection = () => {
     <section className="bg-card-bg border border-card-border rounded-2xl overflow-hidden">
       <SectionTitle>Skills</SectionTitle>
 
-      <div className="px-5 sm:px-6 py-5 space-y-3">
+      <div className="px-5 sm:px-6 py-5 space-y-5">
         {skills.map((skill, i) => (
           <div key={i}>
-            <div className="flex items-center justify-between mb-1.5">
+            <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-foreground">
                 {skill.name}
               </span>
