@@ -19,23 +19,28 @@ const getTagColor = (index: number) => tagColors[index % tagColors.length];
 
 const ProjectsSection = () => {
   return (
-    <section>
+    <section className="bg-card-bg border border-card-border rounded-2xl overflow-hidden">
       <SectionTitle>Projects</SectionTitle>
-      <div className="space-y-4">
+
+      <div className="px-5 sm:px-6 py-5 space-y-5">
         {projects.map((project, i) => (
           <div
             key={i}
-            className="bg-card-bg border border-card-border rounded-xl p-4 sm:p-6 hover:border-primary/40 transition-colors"
+            className={`pb-5 ${
+              i < projects.length - 1
+                ? "border-b border-dashed border-card-border"
+                : ""
+            }`}
           >
-            <h3 className="text-base font-semibold text-foreground mb-1">
+            <h3 className="text-sm font-semibold text-foreground mb-1">
               {project.name}
             </h3>
-            <p className="text-sm text-muted mb-3">{project.description}</p>
+            <p className="text-xs text-muted mb-3 leading-relaxed">{project.description}</p>
             <div className="flex flex-wrap gap-1.5">
               {project.tags.map((tag, j) => (
                 <span
                   key={j}
-                  className={`text-xs px-2.5 py-1 rounded-full font-medium ${getTagColor(j)}`}
+                  className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${getTagColor(j)}`}
                 >
                   {tag}
                 </span>
