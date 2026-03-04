@@ -18,7 +18,7 @@ const EducationSection = () => {
           >
             <div className="flex flex-wrap items-start justify-between gap-2">
               <h3 className=" font-semibold text-foreground">{edu.degree}</h3>
-              <span className="text-xs font-semibold text-primary-foreground bg-primary px-2.5 py-1 rounded-full whitespace-nowrap">
+              <span className="text-xs text-primary-foreground bg-primary px-2.5 py-1 rounded-full whitespace-nowrap">
                 {edu.period}
               </span>
             </div>

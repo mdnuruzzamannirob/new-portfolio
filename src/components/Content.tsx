@@ -13,8 +13,8 @@ const Content = () => {
         {/* Left column – Main content */}
         <div className="flex-1 min-w-0 space-y-10">
           <ExperienceSection />
-          <EducationSection />
           <ProjectsSection />
+          <EducationSection />
         </div>
 
         {/* Right column – Sidebar */}

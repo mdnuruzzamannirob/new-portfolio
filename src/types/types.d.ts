@@ -26,9 +26,11 @@ export interface Skill {
   level: number; // 0-100
 }
 
+export type Level = "Native" | "Fluent" | "Advanced" | "Intermediate" | "Basic";
+
 export interface Language {
   name: string;
-  level: string;
+  level: Level;
 }
 
 export interface Interest {

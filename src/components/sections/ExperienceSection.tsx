@@ -27,7 +27,7 @@ const ExperienceSection = () => {
                     <h3 className=" font-semibold text-foreground leading-snug">
                       {exp.role}
                     </h3>
-                    <span className="text-xs font-semibold text-primary-foreground bg-primary px-2.5 py-1 rounded-full whitespace-nowrap">
+                    <span className="text-xs text-primary-foreground bg-primary px-2.5 py-1 rounded-full whitespace-nowrap">
                       {exp.period}
                     </span>
                   </div>

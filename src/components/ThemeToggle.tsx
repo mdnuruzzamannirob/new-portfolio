@@ -23,7 +23,7 @@ const ThemeToggle = () => {
   const isDark = theme === "dark";
 
   return (
-    <div className="flex justify-end items-center gap-4 sm:gap-6">
+    <div className="flex justify-between items-center gap-4 sm:gap-6">
       {/* Color theme swatches */}
       <div className="flex items-center gap-2.5" aria-label="Color theme">
         {colorOptions.map(({ key, label, bg, ring }) => (
