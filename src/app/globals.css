@@ -5,11 +5,12 @@
 
 /* ── Light mode defaults ─────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --card-bg: #f3f4f6;
-  --card-border: #e5e7eb;
-  --muted: #6b7280;
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --muted: #64748b;
+  --section-bg: #f1f5f9;
 
   /* Blue theme (default) */
   --primary: #3b82f6;
@@ -20,11 +21,12 @@
 
 /* ── Dark mode ───────────────────────────────────────── */
 html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --card-bg: #1a1a1a;
-  --card-border: #2e2e2e;
-  --muted: #9ca3af;
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --muted: #94a3b8;
+  --section-bg: #1e293b;
 }
 
 /* ── Color themes ────────────────────────────────────── */
@@ -69,6 +71,7 @@ html.dark.theme-yellow {
   --color-card-bg: var(--card-bg);
   --color-card-border: var(--card-border);
   --color-muted: var(--muted);
+  --color-section-bg: var(--section-bg);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-primary-light: var(--primary-light);
@@ -81,5 +84,27 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-google-sans), Arial, Helvetica, sans-serif;
-  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }

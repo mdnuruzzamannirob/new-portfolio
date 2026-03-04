@@ -1,10 +1,15 @@
 import ThemeToggle from "@/components/ThemeToggle";
+import { personalInfo } from "@/lib/constants/data";
 
 const Topbar = () => {
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-3 border-b border-card-border bg-background/80 backdrop-blur-sm">
-      <span className="font-semibold text-lg text-primary">Portfolio</span>
-      <ThemeToggle />
+    <nav className="sticky top-0 z-50 border-b border-card-border bg-card-bg/80 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+        <span className="font-semibold text-base sm:text-lg text-foreground">
+          {personalInfo.name}
+        </span>
+        <ThemeToggle />
+      </div>
     </nav>
   );
 };

@@ -23,41 +23,7 @@ const ThemeToggle = () => {
   const isDark = theme === "dark";
 
   return (
-    <div className="flex items-center gap-3">
-      {/* Dark / Light toggle button */}
-      <button
-        onClick={toggleTheme}
-        aria-label="Toggle dark/light mode"
-        title={isDark ? "Switch to light mode" : "Switch to dark mode"}
-        className="flex items-center justify-center w-9 h-9 rounded-full border border-card-border bg-card-bg text-foreground hover:bg-primary-light transition-colors cursor-pointer"
-      >
-        {isDark ? (
-          /* Sun icon */
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-5 h-5 text-yellow-400"
-          >
-            <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
-          </svg>
-        ) : (
-          /* Moon icon */
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-5 h-5 text-slate-700"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        )}
-      </button>
-
+    <div className="flex items-center gap-2 sm:gap-3">
       {/* Color theme swatches */}
       <div className="flex items-center gap-1.5" aria-label="Color theme">
         {colorOptions.map(({ key, label, bg, ring }) => (
@@ -66,14 +32,48 @@ const ThemeToggle = () => {
             onClick={() => setColorTheme(key)}
             aria-label={`${label} theme`}
             title={`${label} theme`}
-            className={`w-5 h-5 rounded-full ${bg} transition-all cursor-pointer ${
+            className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full ${bg} transition-all cursor-pointer ${
               colorTheme === key
                 ? `ring-2 ring-offset-2 ${ring} ring-offset-background scale-110`
-                : "opacity-60 hover:opacity-100"
+                : "opacity-50 hover:opacity-100"
             }`}
           />
         ))}
       </div>
+
+      {/* Dark / Light toggle button */}
+      <button
+        onClick={toggleTheme}
+        aria-label="Toggle dark/light mode"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-medium hover:bg-primary-hover transition-colors cursor-pointer"
+      >
+        {isDark ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-3.5 h-3.5"
+          >
+            <path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2ZM10 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15ZM10 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM15.657 5.404a.75.75 0 1 0-1.06-1.06l-1.061 1.06a.75.75 0 0 0 1.06 1.061l1.061-1.06ZM6.464 14.596a.75.75 0 1 0-1.06-1.06l-1.06 1.06a.75.75 0 0 0 1.06 1.06l1.06-1.06ZM18 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 18 10ZM5 10a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 5 10ZM14.596 15.657a.75.75 0 0 0 1.06-1.06l-1.06-1.061a.75.75 0 1 0-1.06 1.06l1.06 1.061ZM5.404 6.464a.75.75 0 0 0 1.06-1.06l-1.06-1.06a.75.75 0 1 0-1.061 1.06l1.06 1.06Z" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-3.5 h-3.5"
+          >
+            <path
+              fillRule="evenodd"
+              d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        )}
+        <span className="hidden sm:inline">
+          {isDark ? "Toggle Light" : "Toggle Dark"}
+        </span>
+      </button>
     </div>
   );
 };
