@@ -23,16 +23,16 @@ const ThemeToggle = () => {
   const isDark = theme === "dark";
 
   return (
-    <div className="flex items-center gap-2 sm:gap-3">
+    <div className="flex justify-end items-center gap-4 sm:gap-6">
       {/* Color theme swatches */}
-      <div className="flex items-center gap-1.5" aria-label="Color theme">
+      <div className="flex items-center gap-2.5" aria-label="Color theme">
         {colorOptions.map(({ key, label, bg, ring }) => (
           <button
             key={key}
             onClick={() => setColorTheme(key)}
             aria-label={`${label} theme`}
             title={`${label} theme`}
-            className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full ${bg} transition-all cursor-pointer ${
+            className={`size-4 shrink-0 rounded-full ${bg} transition-all cursor-pointer ${
               colorTheme === key
                 ? `ring-2 ring-offset-2 ${ring} ring-offset-background scale-110`
                 : "opacity-50 hover:opacity-100"
@@ -45,7 +45,7 @@ const ThemeToggle = () => {
       <button
         onClick={toggleTheme}
         aria-label="Toggle dark/light mode"
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-medium hover:bg-primary-hover transition-colors cursor-pointer"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-hover transition-colors cursor-pointer"
       >
         {isDark ? (
           <svg
@@ -70,9 +70,8 @@ const ThemeToggle = () => {
             />
           </svg>
         )}
-        <span className="hidden sm:inline">
-          {isDark ? "Toggle Light" : "Toggle Dark"}
-        </span>
+
+        {isDark ? "Toggle Light" : "Toggle Dark"}
       </button>
     </div>
   );
