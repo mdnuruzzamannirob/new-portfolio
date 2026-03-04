@@ -36,14 +36,20 @@ const ExperienceSection = () => {
                   <p className="text-xs font-medium text-primary mb-2.5">
                     {exp.company}
                     {exp.location ? (
-                      <span className="text-muted font-normal"> · {exp.location}</span>
+                      <span className="text-muted font-normal">
+                        {" "}
+                        · {exp.location}
+                      </span>
                     ) : null}
                   </p>
 
                   {/* Highlights */}
                   <ul className="space-y-1">
                     {exp.highlights.map((item, j) => (
-                      <li key={j} className="flex items-start gap-2 text-xs text-muted leading-relaxed">
+                      <li
+                        key={j}
+                        className="flex items-start gap-2 text-xs text-muted leading-relaxed"
+                      >
                         <span className="shrink-0 mt-[5px] w-1 h-1 rounded-full bg-primary/60" />
                         {item}
                       </li>

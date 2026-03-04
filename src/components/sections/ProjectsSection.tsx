@@ -35,7 +35,9 @@ const ProjectsSection = () => {
             <h3 className="text-sm font-semibold text-foreground mb-1">
               {project.name}
             </h3>
-            <p className="text-xs text-muted mb-3 leading-relaxed">{project.description}</p>
+            <p className="text-xs text-muted mb-3 leading-relaxed">
+              {project.description}
+            </p>
             <div className="flex flex-wrap gap-1.5">
               {project.tags.map((tag, j) => (
                 <span

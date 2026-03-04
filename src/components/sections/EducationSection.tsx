@@ -27,7 +27,10 @@ const EducationSection = () => {
             <p className="text-xs font-medium text-primary mb-1">
               {edu.institution}
               {edu.location ? (
-                <span className="text-muted font-normal"> · {edu.location}</span>
+                <span className="text-muted font-normal">
+                  {" "}
+                  · {edu.location}
+                </span>
               ) : null}
             </p>
             <p className="text-xs text-muted">{edu.description}</p>
