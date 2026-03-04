@@ -11,19 +11,19 @@ const Header = () => {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           {/* Left – Identity */}
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground">
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
               {name}
             </h1>
             <p className="text-lg sm:text-xl text-primary font-semibold mt-1">
               {title}
             </p>
-            <p className="text-muted mt-3 max-w-xl text-sm sm:text-base leading-relaxed">
+            <p className="text-muted mt-3 max-w-xl text-sm leading-relaxed">
               {bio}
             </p>
           </div>
 
           {/* Right – Contact */}
-          <div className="flex flex-col gap-2 text-sm text-muted shrink-0">
+          <div className="flex flex-col gap-2 text-sm text-muted  md:items-end shrink-0">
             <ContactRow
               icon="email"
               value={contact.email}
