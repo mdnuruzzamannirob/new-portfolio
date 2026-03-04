@@ -5,8 +5,8 @@ const Header = () => {
   const { name, title, bio, contact } = personalInfo;
 
   return (
-    <header className="bg-card-bg border-b border-card-border">
-      <div className="max-w-6xl space-y-6 mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+    <header className="">
+      <div className="max-w-6xl space-y-6 mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         <ThemeToggle />
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           {/* Left – Identity */}

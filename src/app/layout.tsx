@@ -19,8 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${googleSans.className} antialiased`}>
+    <html lang="en">
+      <body
+        suppressHydrationWarning
+        className={`${googleSans.className} antialiased`}
+      >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

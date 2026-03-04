@@ -5,9 +5,9 @@
 
 /* ── Light mode defaults ─────────────────────────────── */
 :root {
-  --background: #f8fafc;
+  --background: #ffffff;
   --foreground: #1e293b;
-  --card-bg: #ffffff;
+  --card-bg: #f8fafc;
   --card-border: #e2e8f0;
   --muted: #64748b;
   --section-bg: #f1f5f9;
