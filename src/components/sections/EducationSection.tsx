@@ -3,7 +3,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 
 const EducationSection = () => {
   return (
-    <section className="bg-card-bg border border-card-border rounded-2xl overflow-hidden">
+    <section className="bg-card-bg rounded-2xl overflow-hidden">
       <SectionTitle>Education</SectionTitle>
 
       <div className="px-5 sm:px-6 py-5 space-y-6">
@@ -12,7 +12,7 @@ const EducationSection = () => {
             key={i}
             className={`pb-6 ${
               i < education.length - 1
-                ? "border-b border-dashed border-card-border"
+                ? "border-b border-dashed border-primary/30"
                 : ""
             }`}
           >

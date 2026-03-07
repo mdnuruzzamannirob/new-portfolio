@@ -8,9 +8,7 @@
   --background: #ffffff;
   --foreground: #1e293b;
   --card-bg: #f8fafc;
-  --card-border: #e2e8f0;
-  --muted: #64748b;
-  --section-bg: #f1f5f9;
+  --muted: #4a5565;
 
   /* Blue theme (default) */
   --primary: #3b82f6;
@@ -21,12 +19,10 @@
 
 /* ── Dark mode ───────────────────────────────────────── */
 html.dark {
-  --background: #0f172a;
+  --background: #1A1A2E;
   --foreground: #e2e8f0;
-  --card-bg: #1e293b;
-  --card-border: #334155;
-  --muted: #94a3b8;
-  --section-bg: #1e293b;
+  --card-bg: #16213E;
+  --muted: #d1d5dc;
 }
 
 /* ── Color themes ────────────────────────────────────── */
@@ -69,9 +65,7 @@ html.dark.theme-yellow {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card-bg: var(--card-bg);
-  --color-card-border: var(--card-border);
   --color-muted: var(--muted);
-  --color-section-bg: var(--section-bg);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-primary-light: var(--primary-light);

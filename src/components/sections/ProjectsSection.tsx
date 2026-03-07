@@ -19,7 +19,7 @@ const getTagColor = (index: number) => tagColors[index % tagColors.length];
 
 const ProjectsSection = () => {
   return (
-    <section className="bg-card-bg border border-card-border rounded-2xl overflow-hidden">
+    <section className="bg-card-bg rounded-2xl overflow-hidden">
       <SectionTitle>Projects</SectionTitle>
 
       <div className="px-5 sm:px-6 py-5 space-y-6">
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
             key={i}
             className={`pb-6 ${
               i < projects.length - 1
-                ? "border-b border-dashed border-card-border"
+                ? "border-b border-dashed border-primary/30"
                 : ""
             }`}
           >

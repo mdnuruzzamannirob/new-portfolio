@@ -3,14 +3,14 @@ import SectionTitle from "@/components/ui/SectionTitle";
 
 const ExperienceSection = () => {
   return (
-    <section className="bg-card-bg border border-card-border rounded-2xl overflow-hidden">
+    <section className="bg-card-bg rounded-2xl overflow-hidden">
       <SectionTitle>Work Experience</SectionTitle>
 
       {/* Timeline */}
       <div className="px-5 sm:px-6 py-6">
         <div className="relative">
           {/* Vertical spine */}
-          <div className="absolute left-2.25 top-3 bottom-3 w-px bg-card-border" />
+          <div className="absolute left-2.25 top-3 bottom-3 w-px bg-primary" />
 
           <div className="space-y-0">
             {experiences.map((exp, i) => (
@@ -38,13 +38,13 @@ const ExperienceSection = () => {
                   </p>
 
                   {/* Highlights */}
-                  <ul className="space-y-1">
+                  <ul className="space-y-1 ml-2">
                     {exp.highlights.map((item, j) => (
                       <li
                         key={j}
-                        className="flex items-start gap-2 text-sm text-muted leading-relaxed"
+                        className="flex items-start gap-3 text-sm text-muted"
                       >
-                        <span className="shrink-0 mt-2.25 size-1 rounded-full bg-primary" />
+                        <span className="shrink-0 mt-2 size-1.25 rounded-full bg-muted" />
                         {item}
                       </li>
                     ))}
@@ -52,7 +52,7 @@ const ExperienceSection = () => {
 
                   {/* Divider between entries */}
                   {i < experiences.length - 1 && (
-                    <div className="mt-6 border-t border-dashed border-card-border" />
+                    <div className="mt-6 border-t border-dashed border-primary/30" />
                   )}
                 </div>
               </div>
