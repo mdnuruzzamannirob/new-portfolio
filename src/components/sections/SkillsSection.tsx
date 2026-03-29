@@ -3,7 +3,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 
 const SkillsSection = () => {
   return (
-    <section className="bg-card-bg border border-card-border rounded-2xl overflow-hidden">
+    <section className="bg-card-bg rounded-2xl overflow-hidden">
       <SectionTitle>Skills</SectionTitle>
 
       <div className="px-5 sm:px-6 py-5 space-y-5">
@@ -14,7 +14,7 @@ const SkillsSection = () => {
                 {skill.name}
               </span>
             </div>
-            <div className="w-full h-2 bg-card-border rounded-full overflow-hidden">
+            <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
               <div
                 className="h-full bg-primary rounded-full transition-all duration-500"
                 style={{ width: `${skill.level}%` }}
