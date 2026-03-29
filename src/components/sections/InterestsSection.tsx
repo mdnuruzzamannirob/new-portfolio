@@ -1,5 +1,5 @@
-import { interests } from "@/lib/constants/data";
-import SectionTitle from "@/components/ui/SectionTitle";
+import SectionTitle from '@/components/ui/SectionTitle'
+import { interests } from '@/lib/constants/data'
 
 const levelToPercent: Record<string, number> = {
   Passionate: 95,
@@ -7,16 +7,16 @@ const levelToPercent: Record<string, number> = {
   Active: 70,
   Engaged: 65,
   Casual: 45,
-};
+}
 
 const InterestsSection = () => {
   return (
-    <section className="bg-card-bg rounded-2xl overflow-hidden">
+    <section className="bg-card-bg p-6 space-y-6 hover:-translate-y-1 duration-300 rounded-2xl overflow-hidden">
       <SectionTitle>Interests</SectionTitle>
 
-      <div className="px-5 sm:px-6 py-5 space-y-4">
+      <div className="space-y-4">
         {interests.map((interest, i) => {
-          const pct = levelToPercent[interest.level] ?? 50;
+          const pct = levelToPercent[interest.level] ?? 50
           return (
             <div key={i}>
               <div className="flex items-center justify-between mb-1.5">
@@ -34,11 +34,11 @@ const InterestsSection = () => {
                 />
               </div>
             </div>
-          );
+          )
         })}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default InterestsSection;
+export default InterestsSection

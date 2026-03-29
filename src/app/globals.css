@@ -102,3 +102,57 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+
+/* Bubbles */
+@keyframes float-y {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-x {
+
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-18px);
+  }
+}
+
+@keyframes float-xy {
+
+  0%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+
+  33% {
+    transform: translate(12px, -14px);
+  }
+
+  66% {
+    transform: translate(-10px, -8px);
+  }
+}
+
+.bubble-1 {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+.bubble-2 {
+  animation: float-x 6s ease-in-out infinite;
+}
+
+.bubble-3 {
+  animation: float-xy 7s ease-in-out infinite;
+}

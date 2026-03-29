@@ -1,12 +1,12 @@
-import { skills } from "@/lib/constants/data";
-import SectionTitle from "@/components/ui/SectionTitle";
+import SectionTitle from '@/components/ui/SectionTitle'
+import { skills } from '@/lib/constants/data'
 
 const SkillsSection = () => {
   return (
-    <section className="bg-card-bg rounded-2xl overflow-hidden">
+    <section className="bg-card-bg p-6 space-y-6 hover:-translate-y-1 duration-300 rounded-2xl overflow-hidden">
       <SectionTitle>Skills</SectionTitle>
 
-      <div className="px-5 sm:px-6 py-5 space-y-5">
+      <div className="space-y-5">
         {skills.map((skill, i) => (
           <div key={i}>
             <div className="flex items-center justify-between mb-2">
@@ -24,7 +24,7 @@ const SkillsSection = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SkillsSection;
+export default SkillsSection

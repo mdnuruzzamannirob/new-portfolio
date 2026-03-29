@@ -1,19 +1,19 @@
-import { education } from "@/lib/constants/data";
-import SectionTitle from "@/components/ui/SectionTitle";
+import SectionTitle from '@/components/ui/SectionTitle'
+import { education } from '@/lib/constants/data'
 
 const EducationSection = () => {
   return (
-    <section className="bg-card-bg rounded-2xl overflow-hidden">
+    <section className="bg-card-bg hover:-translate-y-1 duration-300 p-6 space-y-6 rounded-2xl overflow-hidden">
       <SectionTitle>Education</SectionTitle>
 
-      <div className="px-5 sm:px-6 py-5 space-y-6">
+      <div className="space-y-6">
         {education.map((edu, i) => (
           <div
             key={i}
             className={`pb-6 ${
               i < education.length - 1
-                ? "border-b border-dashed border-primary/30"
-                : ""
+                ? 'border-b border-dashed border-primary/30'
+                : ''
             }`}
           >
             <div className="flex flex-wrap items-start justify-between gap-2">
@@ -24,14 +24,14 @@ const EducationSection = () => {
             </div>
             <p className="text-sm text-primary mb-2.5">
               {edu.institution}
-              {edu.location ? " " + edu.location : null}
+              {edu.location ? ' ' + edu.location : null}
             </p>
             <p className="text-sm text-muted">{edu.description}</p>
           </div>
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default EducationSection;
+export default EducationSection
