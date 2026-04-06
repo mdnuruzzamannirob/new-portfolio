@@ -10,7 +10,7 @@ import type {
 
 export const personalInfo: PersonalInfo = {
   name: 'Md. Nuruzzaman',
-  title: 'Junior Full-Stack Developer',
+  title: 'Full-Stack Developer',
   bio: 'Passionate developer with 2+ years of experience building production-ready web applications. Specialized in frontend development, with growing expertise in full-stack development.',
   contact: {
     email: 'dev.mdnuruzzaman@gmail.com',
@@ -70,9 +70,9 @@ export const languages: Language[] = [
 
 export const interests: Interest[] = [
   { name: 'Coding', level: 'Passionate' },
-  { name: 'Movies', level: 'Active' },
   { name: 'Traveling', level: 'Enthusiast' },
-  { name: 'Cooking', level: 'Engaged' },
+  { name: 'Movies', level: 'Active' },
+  { name: 'Cricket', level: 'Enthusiast' },
 ]
 
 export const education: Education[] = [
@@ -116,35 +116,100 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    name: 'Online Hotel Booking Platform',
-    description:
-      'A hotel booking platform with React, TypeScript, RTK Query and Socket.IO for real-time booking updates',
-    tags: [
-      'React',
-      'TypeScript',
-      'RTK Query',
-      'Tailwind CSS',
-      'Shadcn UI',
-      'Socket.IO',
+    name: 'NextTrade',
+    type: 'Team Project',
+    description: [
+      'Full-stack fractional-share trading platform with live market data and interactive charts',
+      'Secure buy/sell functionality for stocks and cryptocurrencies with real-time updates via Socket.IO',
+      'Built UI layouts for dashboards, wallet, profile, and transaction history pages',
+      'Ensured seamless client-server integration with reusable UI components',
     ],
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Socket.IO',
+      'Firebase',
+    ],
+    githubClient: 'https://github.com/diptomahin/nextrade',
+    githubServer: 'https://github.com/diptomahin/nexTrade-server',
+    liveUrl: 'https://nextrade-front-end.vercel.app',
   },
   {
-    name: 'E-commerce Buyer Seller Website',
-    description:
-      'An e-commerce platform with React, TypeScript, RTK Query and Socket.IO for real-time order updates',
-    tags: [
-      'React',
-      'TypeScript',
-      'RTK Query',
-      'Tailwind CSS',
-      'Shadcn UI',
-      'Socket.IO',
+    name: 'Invento Wave',
+    type: 'Personal Project',
+    description: [
+      'Web-based inventory management system for products, suppliers, sales, and stock reports',
+      'Role-based access control with real-time updates across all modules',
+      'Integrated Stripe for payment processing and Firebase for authentication',
     ],
+    tags: [
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Firebase',
+      'Stripe',
+    ],
+    githubClient: 'https://github.com/mdnuruzzamannirob/invento-wave-client',
+    githubServer: 'https://github.com/mdnuruzzamannirob/invento-wave-server',
+    liveUrl: 'https://invento-wave.web.app',
   },
   {
-    name: 'Online Trading Platform',
-    description:
-      'A trading platform with React, TypeScript, RTK Query and Socket.IO for real-time market data updates',
-    tags: ['React', 'TypeScript', 'RTK Query', 'Tailwind CSS', 'Shadcn UI'],
+    name: 'Library Hub',
+    type: 'Personal Project',
+    description: [
+      'Library management app for book cataloging and member registration',
+      'Borrowing and return tracking with automated overdue fine management',
+      'Clean role-based UI for both librarians and members',
+    ],
+    tags: [
+      'React.js',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Firebase',
+    ],
+    githubClient: 'https://github.com/mdnuruzzamannirob/library-hub-client',
+    githubServer: 'https://github.com/mdnuruzzamannirob/library-hub-server',
+    liveUrl: 'https://library-hub-ef83f.web.app',
+  },
+  {
+    name: 'Brand Shop',
+    type: 'Personal Project',
+    description: [
+      'Automotive brand website with product showcases and model comparisons',
+      'Test drive booking system and dealership locator feature',
+      'Fully responsive UI with smooth navigation and dynamic data rendering',
+    ],
+    tags: [
+      'React.js',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Firebase',
+    ],
+    githubClient: 'https://github.com/mdnuruzzamannirob/brand-shop-client',
+    githubServer: 'https://github.com/mdnuruzzamannirob/brand-shop-server',
+    liveUrl: 'https://brand-shop-61d84.web.app',
+  },
+  {
+    name: 'Confer',
+    type: 'Personal Project',
+    description: [
+      'Conference management system with paper submission and peer review workflows',
+      'Schedule management and attendee registration with role-based access',
+      'Built entirely on Firebase for auth, database, and hosting',
+    ],
+    tags: ['React.js', 'Tailwind CSS', 'Firebase'],
+    githubClient: 'https://github.com/mdnuruzzamannirob/confer',
+    liveUrl: 'https://confer-42442.web.app',
   },
 ]

@@ -113,7 +113,7 @@ html {
   }
 
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-6px);
   }
 }
 
@@ -125,7 +125,7 @@ html {
   }
 
   50% {
-    transform: translateX(-18px);
+    transform: translateX(-6px);
   }
 }
 
@@ -137,11 +137,11 @@ html {
   }
 
   33% {
-    transform: translate(12px, -14px);
+    transform: translate(6px, -8px);
   }
 
   66% {
-    transform: translate(-10px, -8px);
+    transform: translate(-4px, -6px);
   }
 }
 

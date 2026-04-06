@@ -34,9 +34,11 @@ export interface Language {
   level: Level
 }
 
+export type InterestLevel = 'Passionate' | 'Enthusiast' | 'Active' | 'Casual'
+
 export interface Interest {
   name: string
-  level: string
+  level: InterestLevel
 }
 
 export interface Education {
@@ -50,6 +52,10 @@ export interface Education {
 
 export interface Project {
   name: string
-  description: string
+  type: 'Team Project' | 'Personal Project'
+  description: string[]
   tags: string[]
+  githubClient?: string
+  githubServer?: string
+  liveUrl?: string
 }

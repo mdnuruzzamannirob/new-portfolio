@@ -22,7 +22,7 @@ const EducationSection = () => {
               <Link
                 href={edu.link}
                 target="_blank"
-                className=" font-semibold text-foreground"
+                className="hover:underline hover:text-foreground/80 transition-all font-semibold text-foreground"
               >
                 {edu.degree}{' '}
                 <HiOutlineExternalLink className="inline-block ml-1 mb-1 text-sm text-primary" />

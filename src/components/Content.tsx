@@ -1,9 +1,9 @@
-import ExperienceSection from "@/components/sections/ExperienceSection";
-import SkillsSection from "@/components/sections/SkillsSection";
-import LanguagesSection from "@/components/sections/LanguagesSection";
-import InterestsSection from "@/components/sections/InterestsSection";
-import EducationSection from "@/components/sections/EducationSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
+import EducationSection from '@/components/sections/EducationSection'
+import ExperienceSection from '@/components/sections/ExperienceSection'
+import InterestsSection from '@/components/sections/InterestsSection'
+import LanguagesSection from '@/components/sections/LanguagesSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
+import SkillsSection from '@/components/sections/SkillsSection'
 
 const Content = () => {
   return (
@@ -13,8 +13,8 @@ const Content = () => {
         {/* Left column – Main content */}
         <div className="flex-1 min-w-0 space-y-10">
           <ExperienceSection />
-          <ProjectsSection />
           <EducationSection />
+          <ProjectsSection />
         </div>
 
         {/* Right column – Sidebar */}
@@ -25,7 +25,7 @@ const Content = () => {
         </aside>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content
