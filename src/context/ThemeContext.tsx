@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import {
   createContext,
@@ -6,58 +6,86 @@ import {
   useEffect,
   useState,
   type ReactNode,
-} from "react";
+} from 'react'
 
-export type ThemeMode = "light" | "dark";
-export type ColorTheme = "blue" | "green" | "yellow";
+export type ThemeMode = 'light' | 'dark'
+export type ColorTheme = 'blue' | 'green' | 'yellow'
 
 interface ThemeContextType {
-  theme: ThemeMode;
-  colorTheme: ColorTheme;
-  toggleTheme: () => void;
-  setColorTheme: (color: ColorTheme) => void;
+  theme: ThemeMode
+  colorTheme: ColorTheme
+  toggleTheme: () => void
+  setColorTheme: (color: ColorTheme) => void
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-const getInitialTheme = (): ThemeMode => {
-  if (typeof window === "undefined") return "light";
-  const saved = localStorage.getItem("theme") as ThemeMode | null;
-  return saved === "dark" || saved === "light" ? saved : "light";
-};
+/**
+ * Get theme from HTML element classes (set by inline script before React hydrates)
+ * This ensures we read the actual theme applied, not just what localStorage says
+ */
+const getThemeFromDOM = (): ThemeMode => {
+  if (typeof window === 'undefined') return 'light'
+  return document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+}
 
-const getInitialColor = (): ColorTheme => {
-  if (typeof window === "undefined") return "blue";
-  const saved = localStorage.getItem("colorTheme") as ColorTheme | null;
-  return saved === "blue" || saved === "green" || saved === "yellow"
-    ? saved
-    : "blue";
-};
+/**
+ * Get color theme from HTML element classes (set by inline script)
+ */
+const getColorThemeFromDOM = (): ColorTheme => {
+  if (typeof window === 'undefined') return 'blue'
+  const html = document.documentElement
+
+  if (html.classList.contains('theme-green')) return 'green'
+  if (html.classList.contains('theme-yellow')) return 'yellow'
+  return 'blue'
+}
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<ThemeMode>(getInitialTheme);
-  const [colorTheme, setColorThemeState] =
-    useState<ColorTheme>(getInitialColor);
+  // Initialize with safe defaults
+  // These will be overridden in useEffect after hydration
+  const [theme, setTheme] = useState<ThemeMode>('light')
+  const [colorTheme, setColorThemeState] = useState<ColorTheme>('blue')
+  const [isHydrated, setIsHydrated] = useState(false)
 
-  /* Apply classes to <html> whenever theme or colorTheme changes */
+  /**
+   * After hydration, read theme from DOM (which was set by inline script)
+   * This ensures state matches what's already rendered
+   */
   useEffect(() => {
-    const html = document.documentElement;
+    const currentTheme = getThemeFromDOM()
+    const currentColor = getColorThemeFromDOM()
 
-    // dark / light
-    html.classList.toggle("dark", theme === "dark");
+    setTheme(currentTheme)
+    setColorThemeState(currentColor)
+    setIsHydrated(true)
+  }, [])
 
-    // color theme
-    html.classList.remove("theme-blue", "theme-green", "theme-yellow");
-    html.classList.add(`theme-${colorTheme}`);
+  /**
+   * When user changes theme, update DOM and localStorage
+   * Only runs after hydration to prevent unnecessary updates
+   */
+  useEffect(() => {
+    if (!isHydrated) return
 
-    localStorage.setItem("theme", theme);
-    localStorage.setItem("colorTheme", colorTheme);
-  }, [theme, colorTheme]);
+    const html = document.documentElement
+
+    // Apply theme
+    html.classList.toggle('dark', theme === 'dark')
+
+    // Apply color theme
+    html.classList.remove('theme-blue', 'theme-green', 'theme-yellow')
+    html.classList.add(`theme-${colorTheme}`)
+
+    // Persist to localStorage
+    localStorage.setItem('theme', theme)
+    localStorage.setItem('colorTheme', colorTheme)
+  }, [theme, colorTheme, isHydrated])
 
   const toggleTheme = () =>
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
 
-  const setColorTheme = (color: ColorTheme) => setColorThemeState(color);
+  const setColorTheme = (color: ColorTheme) => setColorThemeState(color)
 
   return (
     <ThemeContext.Provider
@@ -65,11 +93,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     >
       {children}
     </ThemeContext.Provider>
-  );
-};
+  )
+}
 
 export const useTheme = (): ThemeContextType => {
-  const ctx = useContext(ThemeContext);
-  if (!ctx) throw new Error("useTheme must be used inside <ThemeProvider>");
-  return ctx;
-};
+  const ctx = useContext(ThemeContext)
+  if (!ctx) throw new Error('useTheme must be used inside <ThemeProvider>')
+  return ctx
+}

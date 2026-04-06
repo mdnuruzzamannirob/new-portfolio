@@ -9,7 +9,10 @@ const Header = () => {
 
   return (
     <header className="">
-      <div className="max-w-275 space-y-6 mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
+      <div
+        className="max-w-275 space-y-6 mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8"
+        suppressHydrationWarning
+      >
         <ThemeToggle />
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           {/* Left – Identity */}

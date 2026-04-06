@@ -1,3 +1,4 @@
+import { HydrationBoundary } from '@/components/HydrationBoundary'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { constructMetadata, generateWebsiteSchema } from '@/lib/seo'
 import { Baloo_Da_2 } from 'next/font/google'
@@ -36,9 +37,42 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode
 }>) {
+  /**
+   * Inline script to prevent theme flash/blink on page load
+   * This runs BEFORE React hydrates, preventing hydration mismatch
+   * Solves the issue where localStorage theme doesn't match server render
+   */
+  const themeScript = `
+    (function() {
+      try {
+        const theme = localStorage.getItem('theme') || 'light';
+        const colorTheme = localStorage.getItem('colorTheme') || 'blue';
+        const html = document.documentElement;
+
+        // Apply theme classes synchronously
+        html.classList.toggle('dark', theme === 'dark');
+        html.classList.remove('theme-blue', 'theme-green', 'theme-yellow');
+        html.classList.add('theme-' + colorTheme);
+      } catch (e) {
+        // Silently fail if localStorage is unavailable (private browsing, etc)
+      }
+    })();
+  `
+
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/*
+          Theme injection script - MUST run before React hydrates
+          This prevents the "theme flash" issue where the wrong theme displays briefly
+          Script applies classes to <html> before React loads, so suppressHydrationWarning
+          on html allows the hydration mismatch for theme classes we handle via script
+        */}
+        <script
+          dangerouslySetInnerHTML={{ __html: themeScript }}
+          suppressHydrationWarning
+        />
+
         {/*
           Preconnect to external domains for better performance
           Add preconnect tags for any external APIs or CDNs you use
@@ -66,7 +100,9 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${balooDa2.className} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <HydrationBoundary>{children}</HydrationBoundary>
+        </ThemeProvider>
       </body>
     </html>
   )
