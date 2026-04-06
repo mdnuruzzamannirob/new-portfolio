@@ -33,7 +33,7 @@ const ExperienceSection = () => {
 
                 {/* Company */}
                 <p className="text-sm flex items-center gap-1 text-primary mb-2.5">
-                  {exp.company}, {exp.location ? ' ' + exp.location : null}
+                  {exp.company} - {exp.location ? ' ' + exp.location : null}
                 </p>
 
                 {/* Highlights */}
