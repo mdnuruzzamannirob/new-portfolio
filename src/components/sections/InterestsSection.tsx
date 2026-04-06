@@ -1,5 +1,5 @@
 import SectionTitle from '@/components/ui/SectionTitle'
-import { interests } from '@/lib/constants/data'
+import { interests } from '@/lib/data'
 
 const levelToPercent: Record<string, number> = {
   Passionate: 95,

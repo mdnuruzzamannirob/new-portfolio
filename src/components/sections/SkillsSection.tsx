@@ -1,5 +1,5 @@
 import SectionTitle from '@/components/ui/SectionTitle'
-import { skills } from '@/lib/constants/data'
+import { skills } from '@/lib/data'
 
 const SkillsSection = () => {
   return (

@@ -1,5 +1,5 @@
 import SectionTitle from '@/components/ui/SectionTitle'
-import { experiences } from '@/lib/constants/data'
+import { experiences } from '@/lib/data'
 
 const ExperienceSection = () => {
   return (

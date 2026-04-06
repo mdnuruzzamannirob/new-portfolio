@@ -1,5 +1,5 @@
 import SectionTitle from '@/components/ui/SectionTitle'
-import { education } from '@/lib/constants/data'
+import { education } from '@/lib/data'
 import Link from 'next/link'
 import { HiOutlineExternalLink } from 'react-icons/hi'
 

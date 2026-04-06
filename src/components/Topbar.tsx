@@ -1,5 +1,5 @@
-import ThemeToggle from "@/components/ThemeToggle";
-import { personalInfo } from "@/lib/constants/data";
+import ThemeToggle from '@/components/ThemeToggle'
+import { personalInfo } from '@/lib/data'
 
 const Topbar = () => {
   return (
@@ -11,7 +11,7 @@ const Topbar = () => {
         <ThemeToggle />
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Topbar;
+export default Topbar

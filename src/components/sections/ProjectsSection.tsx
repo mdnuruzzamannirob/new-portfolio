@@ -1,7 +1,7 @@
 'use client'
 
 import SectionTitle from '@/components/ui/SectionTitle'
-import { projects } from '@/lib/constants/data'
+import { projects } from '@/lib/data'
 import Link from 'next/link'
 import { HiOutlineExternalLink } from 'react-icons/hi'
 

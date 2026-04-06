@@ -1,4 +1,4 @@
-import { personalInfo } from '@/lib/constants/data'
+import { personalInfo } from '@/lib/data'
 import Link from 'next/link'
 import { FaGithub, FaLinkedin, FaLocationDot, FaMedium } from 'react-icons/fa6'
 import { MdEmail, MdPhone } from 'react-icons/md'
