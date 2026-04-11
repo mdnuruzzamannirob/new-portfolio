@@ -9,31 +9,63 @@ export const siteConfig = {
   title: 'Full-Stack Developer | Portfolio',
   description:
     'Passionate full-stack developer with 2+ years of experience building production-ready web applications. Specialized in frontend development with growing expertise in full-stack development.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://md-nuruzzaman.dev',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://mdnuruzzamannirob.me/',
   author: 'Md. Nuruzzaman',
   email: 'dev.mdnuruzzaman@gmail.com',
   socialLinks: {
-    twitter: undefined, // Add your Twitter handle if available
+    twitter: 'https://x.com/mdnuruzzamandev',
     linkedin: 'https://linkedin.com/in/mdnuruzzamannirob4',
     github: 'https://github.com/mdnuruzzamannirob',
     medium: 'https://medium.com/@mdnuruzzamannirob',
+    instagram: 'https://instagram.com/mdnuruzzamannirobdev',
+    facebook: 'https://facebook.com/mdnuruzzamannirobdev',
   },
   ogImage: {
-    url: 'https://md-nuruzzaman.dev/og-image.png', // Update with your actual OG image URL
+    url: 'https://mdnuruzzamannirob.me/og-image.png',
     width: 1200,
     height: 630,
     alt: 'Md. Nuruzzaman - Full-Stack Developer',
   },
   keywords: [
-    'full-stack developer',
-    'frontend developer',
-    'react developer',
-    'next.js developer',
-    'web development',
-    'portfolio',
-    'developer',
-    'typescript',
-    'web applications',
+    // --- Identity & Personal Branding ---
+    'Md. Nuruzzaman',
+    'Md. Nuruzzaman Nirob',
+    'Nirob Developer',
+    'Full-Stack Engineer',
+    'Software Engineer Bangladesh',
+    'Web developer in Bangladesh',
+
+    // --- Core Tech Stack (Specific & Trending) ---
+    'React.js Developer',
+    'Next.js 14 Developer',
+    'TypeScript Expert',
+    'Modern JavaScript (ES6+)',
+    'Node.js Backend Developer',
+    'MERN Stack Developer',
+    'Tailwind CSS Professional',
+    'Prisma ORM',
+    'PostgreSQL & MongoDB',
+    'State Management (Redux/Zustand)',
+
+    // --- Expert Skills & Services ---
+    'Web Application Development',
+    'Scalable Web Applications',
+    'Serverless Architecture',
+    'API Design & Integration',
+    'Performance Optimization',
+    'Responsive UI/UX Implementation',
+    'SaaS Development',
+    'Clean Code Architecture',
+    'Building Production-Ready Apps',
+
+    // --- Portfolio & Career Focused ---
+    'Developer Portfolio',
+    'Software Engineer Portfolio',
+    'Frontend Developer Portfolio',
+    'Next.js Developer Portfolio',
+    'Remote Web Developer',
+    'Freelance Full-Stack Developer',
+    'Web Development Services',
   ],
 }
 
@@ -141,18 +173,46 @@ export function generatePersonSchema() {
     name: siteConfig.name,
     description: siteConfig.description,
     email: siteConfig.email,
-    jobTitle: 'Full-Stack Developer',
+    jobTitle: 'Full-Stack Developer & Software Engineer',
     url: siteConfig.url,
     image: siteConfig.ogImage.url,
     sameAs: Object.values(siteConfig.socialLinks).filter(Boolean),
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'Bangladesh',
+    },
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Sparktech Agency',
+      parentOrganization: {
+        '@type': 'Organization',
+        name: 'Betopia Group',
+      },
+      location: {
+        '@type': 'Place',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Dhaka',
+          addressCountry: 'Bangladesh',
+        },
+      },
+    },
     knowsAbout: [
-      'React',
-      'Next.js',
+      'React.js',
+      'Next.js 14',
       'TypeScript',
-      'JavaScript',
+      'JavaScript (ES6+)',
       'Node.js',
-      'Full-Stack Development',
-      'Web Development',
+      'MERN Stack',
+      'Tailwind CSS',
+      'Prisma ORM',
+      'PostgreSQL',
+      'MongoDB',
+      'State Management (Redux/Zustand)',
+      'API Design & Integration',
+      'Full-Stack Web Development',
+      'Scalable Web Applications',
+      'Serverless Architecture',
     ],
   }
 }
