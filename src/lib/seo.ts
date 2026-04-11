@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 
 /**
  * Site Configuration
@@ -100,11 +100,6 @@ export function constructMetadata(
     robots: options.noIndex
       ? { index: false, follow: false }
       : { index: true, follow: true },
-    viewport: {
-      width: 'device-width',
-      initialScale: 1,
-      maximumScale: 5,
-    },
     openGraph: {
       type: options.og?.type || 'website',
       locale: 'en_US',
@@ -232,4 +227,14 @@ export function generateBreadcrumbSchema(
       item: item.url,
     })),
   }
+}
+
+/**
+ * Viewport configuration
+ * Defines how the page should be displayed on different devices
+ */
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }

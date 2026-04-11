@@ -1,9 +1,15 @@
 import { HydrationBoundary } from '@/components/HydrationBoundary'
 import { ThemeProvider } from '@/context/ThemeContext'
-import { constructMetadata, generateWebsiteSchema } from '@/lib/seo'
+import { constructMetadata, generateWebsiteSchema, viewport } from '@/lib/seo'
 import { Baloo_Da_2 } from 'next/font/google'
 import { ReactNode } from 'react'
 import './globals.css'
+
+/**
+ * Export viewport configuration
+ * Defines how the page should be displayed on different devices
+ */
+export { viewport }
 
 /**
  * Optimize font loading to prevent layout shift
