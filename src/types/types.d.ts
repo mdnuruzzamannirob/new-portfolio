@@ -50,12 +50,16 @@ export interface Education {
   link: string
 }
 
+export interface ProjectUrl {
+  label: string
+  url: string
+}
+
 export interface Project {
   name: string
   type: 'Team Project' | 'Personal Project'
+  year?: number
   description: string[]
   tags: string[]
-  githubClient?: string
-  githubServer?: string
-  liveUrl?: string
+  urls: ProjectUrl[]
 }

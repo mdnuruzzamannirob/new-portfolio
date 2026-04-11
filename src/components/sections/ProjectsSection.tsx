@@ -30,14 +30,21 @@ const ProjectsSection = () => {
       <div className="space-y-0">
         {projects.map((project, i) => (
           <div key={i} className="flex-1 min-w-0">
-            {/* Top row: Project name + type */}
-            <div className="flex flex-wrap items-center gap-1 mb-1">
-              <h3 className="font-semibold text-foreground leading-snug">
-                {project.name}
-              </h3>
-              {project.type === 'Team Project' && (
-                <span className="text-xs whitespace-nowrap">
-                  ({project.type})
+            {/* Top row: Project name + type on left, year on right */}
+            <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+              <div className="flex flex-wrap items-center gap-1">
+                <h3 className="font-semibold text-foreground leading-snug">
+                  {project.name}
+                </h3>
+                {project.type === 'Team Project' && (
+                  <span className="text-xs whitespace-nowrap text-muted">
+                    ({project.type})
+                  </span>
+                )}
+              </div>
+              {project.year && (
+                <span className="text-xs text-primary-foreground bg-primary px-2.5 py-1 rounded-full whitespace-nowrap">
+                  {project.year}
                 </span>
               )}
             </div>
@@ -69,39 +76,18 @@ const ProjectsSection = () => {
 
             {/* Links */}
             <div className="flex flex-wrap gap-5 items-center text-sm">
-              {project.liveUrl && (
+              {project.urls.map((urlItem, j) => (
                 <Link
-                  href={project.liveUrl}
+                  key={j}
+                  href={urlItem.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline hover:text-primary/80 transition-all"
                 >
-                  Live Demo
+                  {urlItem.label}
                   <HiOutlineExternalLink className="inline-block ml-0.5 mb-0.5 text-xs text-primary" />
                 </Link>
-              )}
-              {project.githubClient && (
-                <Link
-                  href={project.githubClient}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline hover:text-primary/80 transition-colors"
-                >
-                  Client Code
-                  <HiOutlineExternalLink className="inline-block ml-0.5 mb-0.5 text-xs text-primary" />
-                </Link>
-              )}
-              {project.githubServer && (
-                <Link
-                  href={project.githubServer}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline hover:text-primary/80 transition-colors"
-                >
-                  Server Code
-                  <HiOutlineExternalLink className="inline-block ml-0.5 mb-0.5 text-xs text-primary" />
-                </Link>
-              )}
+              ))}
             </div>
 
             {/* Divider between entries */}
