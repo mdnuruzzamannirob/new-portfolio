@@ -8,6 +8,8 @@ import { MetadataRoute } from 'next'
  *
  * Route: /sitemap.xml (automatically generated from this file)
  */
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url
 

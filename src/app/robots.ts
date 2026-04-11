@@ -7,6 +7,8 @@ import { MetadataRoute } from 'next'
  *
  * Route: /robots.txt (automatically generated from this file)
  */
+export const dynamic = 'force-static'
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
