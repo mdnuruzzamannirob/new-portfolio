@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "mdnuruzzamannirob",
     "public": "out",
     "ignore": [
       "firebase.json",
