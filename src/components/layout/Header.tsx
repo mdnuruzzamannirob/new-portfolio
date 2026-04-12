@@ -42,14 +42,14 @@ const Header = () => {
             />
             <ContactRow icon={<FaLocationDot />} value={contact.location} />
             <ContactRow
-              icon={<FaLinkedin />}
-              value={contact.linkedin}
-              href={`https://${contact.linkedin}`}
-            />
-            <ContactRow
               icon={<FaGithub />}
               value={contact.github}
               href={`https://${contact.github}`}
+            />
+            <ContactRow
+              icon={<FaLinkedin />}
+              value={contact.linkedin}
+              href={`https://${contact.linkedin}`}
             />
             <ContactRow
               icon={<FaMedium />}

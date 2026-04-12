@@ -16,8 +16,8 @@ export const personalInfo: PersonalInfo = {
     email: 'dev.mdnuruzzaman@gmail.com',
     phone: '+880 1973 875893',
     location: 'Dhaka, Bangladesh',
-    linkedin: 'linkedin.com/in/mdnuruzzamannirob4',
     github: 'github.com/mdnuruzzamannirob',
+    linkedin: 'linkedin.com/in/mdnuruzzamannirob4',
     medium: 'medium.com/@mdnuruzzamannirob',
   },
 }
@@ -242,7 +242,6 @@ export const projects: Project[] = [
       'Express.js',
       'MongoDB',
       'Stripe',
-      'JWT',
     ],
     urls: [
       { label: 'Live Demo', url: 'https://invento-wave.web.app' },
@@ -277,7 +276,6 @@ export const projects: Project[] = [
       'Node.js',
       'Express.js',
       'MongoDB',
-      'JWT',
     ],
     urls: [
       { label: 'Live Demo', url: 'https://library-hub-ef83f.web.app' },
@@ -312,7 +310,6 @@ export const projects: Project[] = [
       'SweetAlert2',
       'Express.js',
       'MongoDB',
-      'JWT',
     ],
     urls: [
       { label: 'Live Demo', url: 'https://brand-shop-61d84.web.app' },
