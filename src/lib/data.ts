@@ -117,7 +117,7 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    name: 'Testora',
+    name: 'Testora - E-Learning & Exam Preparation Platform',
 
     year: 2026,
     description: [
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'WanderStay',
+    name: 'WanderStay - Travel Booking Platform',
 
     year: 2026,
     description: [
@@ -189,7 +189,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'NextTrade',
+    name: 'NextTrade - Stock Trading Platform',
     year: 2024,
     description: [
       'Collaborated on a full-stack trading platform supporting trade execution, real-time market visibility, and portfolio tracking',
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Invento Wave',
+    name: 'Invento Wave - Inventory Management System',
 
     year: 2023,
     description: [
@@ -256,7 +256,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Library Hub',
+    name: 'Library Hub - Digital Library Management System',
 
     year: 2023,
     description: [
@@ -290,7 +290,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Brand Shop',
+    name: 'Brand Shop - Automotive E-Commerce Platform',
 
     year: 2023,
     description: [
@@ -324,7 +324,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Confer',
+    name: 'Confer - Event Discovery Platform',
 
     year: 2023,
     description: [
