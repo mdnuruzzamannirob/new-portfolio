@@ -57,7 +57,6 @@ export interface ProjectUrl {
 
 export interface Project {
   name: string
-  type: 'Team Project' | 'Personal Project'
   year?: number
   description: string[]
   tags: string[]

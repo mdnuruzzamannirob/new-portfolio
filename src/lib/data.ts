@@ -60,6 +60,7 @@ export const skills: Skill[] = [
   { name: 'Git / GitHub', level: 82 },
   { name: 'Node.js / Express.js', level: 65 },
   { name: 'MongoDB / Mongoose', level: 60 },
+  { name: 'JWT / Firebase Authentication', level: 65 },
 ]
 
 export const languages: Language[] = [
@@ -117,7 +118,7 @@ export const education: Education[] = [
 export const projects: Project[] = [
   {
     name: 'Testora',
-    type: 'Personal Project',
+
     year: 2026,
     description: [
       'Built scalable multi-tenant SaaS platform for exam preparation, course marketplace, and educational content management serving multiple user roles',
@@ -128,7 +129,6 @@ export const projects: Project[] = [
     ],
     tags: [
       'Next.js',
-      'React',
       'TypeScript',
       'Redux Toolkit',
       'Tailwind CSS',
@@ -152,7 +152,7 @@ export const projects: Project[] = [
   },
   {
     name: 'WanderStay',
-    type: 'Personal Project',
+
     year: 2026,
     description: [
       'Created full-featured booking platform connecting travelers with property owners using Next.js and React',
@@ -163,7 +163,6 @@ export const projects: Project[] = [
     ],
     tags: [
       'Next.js',
-      'React',
       'TypeScript',
       'Redux Toolkit',
       'Tailwind CSS',
@@ -191,7 +190,6 @@ export const projects: Project[] = [
   },
   {
     name: 'NextTrade',
-    type: 'Team Project',
     year: 2024,
     description: [
       'Collaborated on full-stack trading platform enabling users to execute trades with real-time market data and portfolio tracking',
@@ -202,10 +200,11 @@ export const projects: Project[] = [
     ],
     tags: [
       'Next.js',
-      'React',
+      'JavaScript',
       'Material UI',
       'Framer Motion',
       'Tailwind CSS',
+      'Node.js',
       'Express.js',
       'MongoDB',
       'Firebase',
@@ -223,7 +222,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Invento Wave',
-    type: 'Personal Project',
+
     year: 2023,
     description: [
       'Engineered complete inventory management system for retail shops with product tracking and stock monitoring capabilities',
@@ -235,9 +234,11 @@ export const projects: Project[] = [
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Tailwind CSS',
       'React Hook Form',
       'Firebase',
+      'Node.js',
       'Express.js',
       'MongoDB',
       'Stripe',
@@ -257,7 +258,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Library Hub',
-    type: 'Personal Project',
+
     year: 2023,
     description: [
       'Built complete library management platform with book catalog across multiple categories and advanced search functionality',
@@ -269,9 +270,11 @@ export const projects: Project[] = [
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Material UI',
       'React Router',
       'Firebase',
+      'Node.js',
       'Express.js',
       'MongoDB',
       'JWT',
@@ -290,7 +293,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Brand Shop',
-    type: 'Personal Project',
+
     year: 2023,
     description: [
       'Developed automotive e-commerce platform with product catalog across multiple brands and categories',
@@ -302,6 +305,7 @@ export const projects: Project[] = [
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Tailwind CSS',
       'React Router',
       'Firebase',
@@ -324,7 +328,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Confer',
-    type: 'Personal Project',
+
     year: 2023,
     description: [
       'Developed event discovery platform with conference and event listings across multiple categories',
@@ -336,6 +340,7 @@ export const projects: Project[] = [
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Tailwind CSS',
       'Material Tailwind',
       'React Router',

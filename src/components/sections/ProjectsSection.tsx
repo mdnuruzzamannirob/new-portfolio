@@ -32,16 +32,10 @@ const ProjectsSection = () => {
           <div key={i} className="flex-1 min-w-0">
             {/* Top row: Project name + type on left, year on right */}
             <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-              <div className="flex flex-wrap items-center gap-1">
-                <h3 className="font-semibold text-foreground leading-snug">
-                  {project.name}
-                </h3>
-                {project.type === 'Team Project' && (
-                  <span className="text-xs whitespace-nowrap text-muted">
-                    ({project.type})
-                  </span>
-                )}
-              </div>
+              <h3 className="font-semibold text-foreground leading-snug">
+                {project.name}
+              </h3>
+
               {project.year && (
                 <span className="text-xs text-primary-foreground bg-primary px-2.5 py-1 rounded-full whitespace-nowrap">
                   {project.year}
