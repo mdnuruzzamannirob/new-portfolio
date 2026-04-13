@@ -2,6 +2,7 @@ import { HydrationBoundary } from '@/components/HydrationBoundary'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { constructMetadata, generateWebsiteSchema, viewport } from '@/lib/seo'
 import { Baloo_Da_2 } from 'next/font/google'
+import Script from 'next/script'
 import { ReactNode } from 'react'
 import './globals.css'
 
@@ -74,6 +75,22 @@ export default function RootLayout({
           Script applies classes to <html> before React loads, so suppressHydrationWarning
           on html allows the hydration mismatch for theme classes we handle via script
         */}
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YV5SJ0MBBK"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YV5SJ0MBBK', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
         <script
           dangerouslySetInnerHTML={{ __html: themeScript }}
           suppressHydrationWarning
