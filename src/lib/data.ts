@@ -11,13 +11,13 @@ import type {
 export const personalInfo: PersonalInfo = {
   name: 'Md. Nuruzzaman',
   title: 'Full-Stack Developer',
-  bio: 'Passionate developer with 2+ years of experience building production-ready web applications. Specialized in frontend development, with growing expertise in full-stack development.',
+  bio: 'Frontend-focused full-stack developer with 2+ years of experience shipping client-facing web applications from design handoff to production delivery.',
   contact: {
     email: 'dev.mdnuruzzaman@gmail.com',
     phone: '+880 1973 875893',
     location: 'Dhaka, Bangladesh',
-    linkedin: 'linkedin.com/in/mdnuruzzamannirob4',
     github: 'github.com/mdnuruzzamannirob',
+    linkedin: 'linkedin.com/in/mdnuruzzamannirob4',
     medium: 'medium.com/@mdnuruzzamannirob',
   },
 }
@@ -29,10 +29,10 @@ export const experiences: Experience[] = [
     location: 'Mohakhali, Dhaka',
     period: 'October 2025 - Present',
     highlights: [
-      'Built and delivered varied client projects including e-commerce platforms, dashboards, landing pages, and custom web apps in a fast-paced, Fiverr-based agency environment',
-      'Handled the complete frontend pipeline — from design handoff to UI development, API integration, and final delivery',
-      'Managed client communication directly, including requirement gathering, progress updates, and review cycles',
-      'Coordinated with backend developers to ensure smooth API integration and consistent cross-team delivery',
+      'Deliver client projects across e-commerce platforms, dashboards, landing pages, and custom web apps in a fast-paced agency environment',
+      'Own the frontend delivery pipeline from design handoff to UI implementation, API integration, QA alignment, and release handoff',
+      'Lead direct client communication including requirement clarification, progress updates, review cycles, and final delivery coordination',
+      'Collaborate closely with backend developers to align API contracts and reduce integration friction during delivery',
     ],
   },
   {
@@ -41,10 +41,10 @@ export const experiences: Experience[] = [
     location: 'Shewrapara, Dhaka',
     period: 'April 2024 - September 2025',
     highlights: [
-      'Worked on a production-grade OTA (Online Travel Agency) platform focused on the flight booking experience',
-      'Built new UI pages, maintained existing features, integrated REST APIs, and handled bug fixes independently',
-      'Owned features end-to-end — from implementation to delivery — with minimal oversight',
-      'Developed a strong habit of accountability and responsibility for production-level code affecting real users',
+      'Contributed to a production OTA (Online Travel Agency) platform focused on real-world flight booking workflows',
+      'Built new UI pages, maintained existing modules, integrated REST APIs, and resolved production issues independently',
+      'Owned feature delivery end-to-end from implementation through release with minimal supervision',
+      'Strengthened production engineering discipline through accountability for code quality, reliability, and user-facing behavior',
     ],
   },
 ]
@@ -60,6 +60,7 @@ export const skills: Skill[] = [
   { name: 'Git / GitHub', level: 82 },
   { name: 'Node.js / Express.js', level: 65 },
   { name: 'MongoDB / Mongoose', level: 60 },
+  { name: 'JWT / Firebase Authentication', level: 65 },
 ]
 
 export const languages: Language[] = [
@@ -77,58 +78,57 @@ export const interests: Interest[] = [
 
 export const education: Education[] = [
   {
-    degree: 'Bachelor of Arts in English Literature',
+    degree: 'Bachelor of Arts in English',
     institution: 'National University',
     location: 'Bangladesh',
     period: '2023 - 2027 (Expected)',
     description:
-      'Studying English literature with emphasis on language proficiency, literary analysis, and academic writing.',
+      'Ongoing undergraduate program focused on language proficiency, critical reading, and academic communication.',
     link: 'https://www.nu.ac.bd/syllabus-Bachelor-of-Arts-Honours.php',
   },
   {
     degree: 'Practical Prompt Engineering',
     institution: 'Frontend Masters',
-    location: '',
+    location: 'Online',
     period: 'April 2026',
     description:
-      'Completed a hands-on course covering prompt design, LLM behavior, and practical AI integration techniques. Credential ID: e50180c855-QrhipoBEtR',
+      'Completed hands-on training on prompt design, LLM behavior, and practical AI integration. Credential ID: e50180c855-QrhipoBEtR.',
     link: 'https://static.frontendmasters.com/ud/c/e50180c855/QrhipoBEtR/prompt-engineering.pdf',
   },
   {
     degree: 'Tailwind CSS 4+',
     institution: 'Frontend Masters',
-    location: '',
+    location: 'Online',
     period: 'March 2026',
     description:
-      'Completed an in-depth course on Tailwind CSS v4, covering utility-first design, custom theming, and modern responsive layouts. Credential ID: e50180c855-XQKnWntAkM',
+      'Completed advanced Tailwind CSS v4 training on utility-first architecture, theming, and responsive UI patterns. Credential ID: e50180c855-XQKnWntAkM.',
     link: 'https://static.frontendmasters.com/ud/c/e50180c855/XQKnWntAkM/tailwind-css-v2.pdf',
   },
   {
     degree: 'Complete Web Development Course',
     institution: 'Programming Hero',
-    location: '',
+    location: 'Online',
     period: 'July 2023 - December 2023',
     description:
-      'Completed a full web development bootcamp covering HTML, CSS, JavaScript, React, Tailwind CSS and more. Credential ID: WEB8-1658',
+      'Completed an intensive web development bootcamp covering HTML, CSS, JavaScript, React, and Tailwind CSS. Credential ID: WEB8-1658.',
     link: 'https://drive.google.com/file/d/1D0nnc-MkBQRgks2zXhF_eXX-8EVH0y0t/view?usp=sharing',
   },
 ]
 
 export const projects: Project[] = [
   {
-    name: 'Testora',
-    type: 'Personal Project',
+    name: 'Testora - E-Learning & Exam Preparation Platform',
+
     year: 2026,
     description: [
-      'Built scalable multi-tenant SaaS platform for exam preparation, course marketplace, and educational content management serving multiple user roles',
-      'Developed responsive student dashboard with interactive practice question engine, course purchase workflow, and article reading interface using React and Redux state management',
-      'Engineered admin panel with user management, content moderation, order processing, and real-time analytics dashboards using Recharts for data visualization',
-      'Implemented OTP-based authentication with password recovery and profile management using React Hook Form and Zod validation',
-      'Deployed production-ready application on Vercel with optimized performance and SEO implementation',
+      'Built a multi-tenant SaaS platform for exam preparation, course sales, and educational content workflows across multiple user roles',
+      'Developed a responsive student experience with practice sessions, course purchase flow, and article reading using React and Redux Toolkit',
+      'Engineered an admin dashboard for user management, content moderation, order handling, and analytics visualization with Recharts',
+      'Implemented OTP-based authentication, password recovery, and profile management with React Hook Form and Zod validation',
+      'Deployed frontend and dashboard applications on Vercel with production-focused performance and SEO setup',
     ],
     tags: [
       'Next.js',
-      'React',
       'TypeScript',
       'Redux Toolkit',
       'Tailwind CSS',
@@ -151,19 +151,18 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'WanderStay',
-    type: 'Personal Project',
+    name: 'WanderStay - Travel Booking Platform',
+
     year: 2026,
     description: [
-      'Created full-featured booking platform connecting travelers with property owners using Next.js and React',
-      'Built customer-facing application with property search with real-time availability calendar, booking management, and reservation tracking using date-fns',
-      'Developed comprehensive admin dashboard featuring user management, occupancy analytics, guest messaging system, and transaction history with Recharts',
-      'Implemented real-time notifications and status updates with responsive design for mobile, tablet, and desktop platforms',
-      'Deployed on Vercel with optimized build performance and production-ready state management using Redux Toolkit',
+      'Created a booking platform connecting travelers with property owners using Next.js and a component-driven frontend architecture',
+      'Built customer-facing flows for property search, availability calendar, booking management, and reservation tracking with date-fns',
+      'Developed an admin dashboard with user operations, occupancy analytics, guest messaging, and transaction reporting using Recharts',
+      'Implemented real-time status updates and notifications with responsive behavior across mobile, tablet, and desktop layouts',
+      'Deployed frontend and dashboard applications on Vercel with optimized builds and maintainable Redux Toolkit state management',
     ],
     tags: [
       'Next.js',
-      'React',
       'TypeScript',
       'Redux Toolkit',
       'Tailwind CSS',
@@ -190,22 +189,22 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'NextTrade',
-    type: 'Team Project',
+    name: 'NextTrade - Stock Trading Platform',
     year: 2024,
     description: [
-      'Collaborated on full-stack trading platform enabling users to execute trades with real-time market data and portfolio tracking',
-      'Developed trading interface with watchlist management, portfolio dashboard, real-time price updates using Socket.IO connection',
-      'Integrated Stripe payment gateway for secure deposits and withdrawals with Firebase authentication and JWT tokens',
-      'Built trading academy section with market insights, educational content, and user review system',
-      'Implemented Material UI components with Framer Motion animations for smooth user experience across responsive design',
+      'Collaborated on a full-stack trading platform supporting trade execution, real-time market visibility, and portfolio tracking',
+      'Developed trading interfaces including watchlists, portfolio dashboards, and live pricing flows with Socket.IO integration',
+      'Integrated Stripe payments for deposit and withdrawal workflows with Firebase authentication and JWT-based authorization',
+      'Built a learning module for market insights, educational content, and user feedback to improve product engagement',
+      'Implemented responsive UI patterns with Material UI and Framer Motion to improve navigation clarity and interaction quality',
     ],
     tags: [
       'Next.js',
-      'React',
+      'JavaScript',
       'Material UI',
       'Framer Motion',
       'Tailwind CSS',
+      'Node.js',
       'Express.js',
       'MongoDB',
       'Firebase',
@@ -222,26 +221,27 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Invento Wave',
-    type: 'Personal Project',
+    name: 'Invento Wave - Inventory Management System',
+
     year: 2023,
     description: [
-      'Engineered complete inventory management system for retail shops with product tracking and stock monitoring capabilities',
-      'Implemented product catalog with category organization, discount management, and real-time inventory updates',
-      'Built admin dashboard with sales analytics, role-based access control (owner/manager/staff), and automated invoice generation',
-      'Integrated Stripe payment processing for customer transactions with secure checkout flow',
-      'Developed responsive UI using Vite and Tailwind CSS for optimized performance with Firebase authentication',
+      'Engineered an inventory management system for retail operations with product tracking and stock monitoring workflows',
+      'Implemented product catalog management with category controls, discounts, and real-time inventory updates',
+      'Built an admin dashboard with sales insights, role-based access (owner, manager, staff), and invoice generation',
+      'Integrated Stripe payment workflows for secure transaction processing and checkout reliability',
+      'Developed a responsive frontend with Vite and Tailwind CSS, backed by Firebase authentication and role-aware access',
     ],
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Tailwind CSS',
       'React Hook Form',
       'Firebase',
+      'Node.js',
       'Express.js',
       'MongoDB',
       'Stripe',
-      'JWT',
     ],
     urls: [
       { label: 'Live Demo', url: 'https://invento-wave.web.app' },
@@ -256,25 +256,26 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Library Hub',
-    type: 'Personal Project',
+    name: 'Library Hub - Digital Library Management System',
+
     year: 2023,
     description: [
-      'Built complete library management platform with book catalog across multiple categories and advanced search functionality',
-      'Implemented borrow/return workflow with automated book history tracking and availability status management',
-      'Developed community features allowing users to contribute by adding new books and updating existing information',
-      'Created user dashboard with borrowing history, reading preferences, and personalized book recommendations',
-      'Designed Material UI interface with React Router navigation and Vite build optimization for fast load times',
+      'Built a library management platform with categorized book catalogs and search-first discovery experiences',
+      'Implemented borrow and return workflows with automated history tracking and availability status management',
+      'Developed community contribution features to add books and maintain catalog information collaboratively',
+      'Created user dashboards for borrowing history, reading preferences, and personalized recommendation flows',
+      'Designed a maintainable Material UI interface with React Router navigation and Vite-powered frontend performance',
     ],
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Material UI',
       'React Router',
       'Firebase',
+      'Node.js',
       'Express.js',
       'MongoDB',
-      'JWT',
     ],
     urls: [
       { label: 'Live Demo', url: 'https://library-hub-ef83f.web.app' },
@@ -289,26 +290,26 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Brand Shop',
-    type: 'Personal Project',
+    name: 'Brand Shop - Automotive E-Commerce Platform',
+
     year: 2023,
     description: [
-      'Developed automotive e-commerce platform with product catalog across multiple brands and categories',
-      'Built advanced search and filtering system with product specifications, customer reviews with star ratings, and real-time stock status',
-      'Implemented complete shopping cart functionality with persistent state management and secure checkout process',
-      'Created user account system for order tracking, wishlist management, and purchase history with Firebase authentication',
-      'Designed responsive UI using Tailwind CSS with SweetAlert2 notifications for order status updates',
+      'Developed an automotive e-commerce platform with multi-brand catalog structures and product-focused browsing',
+      'Built search and filtering experiences with specifications, customer reviews, ratings, and stock visibility',
+      'Implemented cart, checkout, and persistent state workflows to support smooth purchase journeys',
+      'Created authenticated user account features for order tracking, wishlist management, and purchase history',
+      'Designed responsive Tailwind CSS interfaces with SweetAlert2 status feedback for key order interactions',
     ],
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Tailwind CSS',
       'React Router',
       'Firebase',
       'SweetAlert2',
       'Express.js',
       'MongoDB',
-      'JWT',
     ],
     urls: [
       { label: 'Live Demo', url: 'https://brand-shop-61d84.web.app' },
@@ -323,19 +324,20 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Confer',
-    type: 'Personal Project',
+    name: 'Confer - Event Discovery Platform',
+
     year: 2023,
     description: [
-      'Developed event discovery platform with conference and event listings across multiple categories',
-      'Implemented event search and filtering system with category-based browsing and detailed event information display',
-      'Built user registration workflow with personal dashboard for tracking registered events and automatic reminders',
-      'Created responsive client-side application using React and React Router with fast performance using Vite',
-      'Designed professional Material Tailwind interface with intuitive navigation and real-time search capabilities',
+      'Developed an event discovery platform with conference and event listings across multiple categories',
+      'Implemented search and filter workflows with category navigation and detailed event information views',
+      'Built user registration flows with personal dashboards for event tracking and reminder-aware experiences',
+      'Created a responsive React and React Router frontend with Vite for fast development and build performance',
+      'Designed Material Tailwind interfaces with intuitive navigation patterns and real-time search behavior',
     ],
     tags: [
       'React',
       'Vite',
+      'JavaScript',
       'Tailwind CSS',
       'Material Tailwind',
       'React Router',
